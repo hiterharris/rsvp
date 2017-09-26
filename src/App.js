@@ -16,7 +16,7 @@ class App extends Component {
         isEditing: false
       },
       {
-        name: 'Hiter',
+        name: 'Tom',
         isConfirmed: false,
         isEditing: false
       },
@@ -24,7 +24,12 @@ class App extends Component {
         name: 'Samantha',
         isConfirmed: false,
         isEditing: false
-      }
+      },
+      {
+        name: 'Michael',
+        isConfirmed: false,
+        isEditing: false
+      },
     ]
   };
 
@@ -106,7 +111,7 @@ class App extends Component {
       <div className="App">
         <header>
           <h1>RSVP</h1>
-          <p>A Treehouse App</p>
+          <p>Organize your invitations</p>
           <form onSubmit={this.newGuestSubmitHandler}>
             <input
               type="text"
