@@ -54,38 +54,38 @@ class App extends Component {
     this.toggleGuestPropertyAt("isEditing", index);
 
   setNameAt = (name, indexToChange) =>
-  this.setState({
-    guests: this.state.guests.map((guest, index) => {
-      if (index === indexToChange) {
-        return {
-          ...guest,
-          name
-        };
-      }
-      return guest;
-    })
-  });
+    this.setState({
+      guests: this.state.guests.map((guest, index) => {
+        if (index === indexToChange) {
+          return {
+            ...guest,
+            name
+          };
+        }
+        return guest;
+      })
+    });
 
   toggleFilter = () =>
-    this.setState({isFiltered: !this.state.isFiltered});
+    this.setState({ isFiltered: !this.state.isFiltered });
 
   handleNameInput = e =>
-    this.setState({ pendingGuest: e.target.value })
+    this.setState({ pendingGuest: e.target.value });
 
   newGuestSubmitHandler = e => {
-      e.preventDefault();
-      this.setState({
-        guests: [
-          {
-            name: this.state.pendingGuest,
-            isConfirmed: false,
-            isEditing: false,
-          },
-          ...this.state.guests
-        ],
-        pendingGuest: ""
-      })
-    }
+    e.preventDefault();
+    this.setState({
+      guests: [
+        {
+          name: this.state.pendingGuest,
+          isConfirmed: false,
+          isEditing: false
+        },
+        ...this.state.guests
+      ],
+      pendingGuest: ''
+    });
+  }
 
   getTotalInvited = () => this.state.guests.length;
   // getAttendingGuests = () =>
@@ -97,7 +97,7 @@ class App extends Component {
         <header>
           <h1>RSVP</h1>
           <p>A Treehouse App</p>
-          <form onSubmit={this.newGuestSubmitHandler} >
+          <form onSubmit={this.newGuestSubmitHandler}>
             <input
               type="text"
               onChange={this.handleNameInput}
@@ -140,6 +140,7 @@ class App extends Component {
             setNameAt={this.setNameAt}
             isFiltered={this.state.isFiltered}
             removeGuestAt={this.removeGuestAt}
+            pendingGuest={this.state.pendingGuest}
           />
 
         </div>
