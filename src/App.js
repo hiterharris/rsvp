@@ -10,7 +10,21 @@ class App extends Component {
     isFiltered: false,
     pendingGuest: "",
     guests: [
-      
+      {
+      name: "Liza",
+      isConfirmed: false,
+      iEditing: false,
+      },
+    {
+      name: "Samantha",
+      isConfirmed: false,
+      iEditing: false,
+      },
+    {
+      name: "Michael",
+      isConfirmed: false,
+      iEditing: false,
+      }
     ]
   };
 
