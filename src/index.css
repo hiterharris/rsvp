@@ -95,8 +95,8 @@ button {
 
 header {
   text-align: center;
-  background: linear-gradient(90deg, #d4eece),
-    url(./images/wedding-2.jpg) no-repeat;
+  background: linear-gradient(90deg, #d4eece, #d4eece, #d4eece),
+    url(./images/wedding.jpg) no-repeat;
   background-blend-mode: multiply;
   background-size: cover;
 }
